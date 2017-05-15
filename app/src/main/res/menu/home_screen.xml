@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_filter"
+        android:icon="@drawable/ic_filter_list"
+        android:orderInCategory="200"
+        android:title="@string/filter"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_location"
+        android:icon="@drawable/ic_location_on"
+        android:orderInCategory="300"
+        android:title="@string/location"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_add"
+        android:icon="@drawable/ic_add_circle_outline"
+        android:orderInCategory="400"
+        android:title="@string/add"
+        app:showAsAction="ifRoom" />
+</menu>

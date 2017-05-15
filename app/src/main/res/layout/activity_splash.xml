@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/SplashTheme">
+
+    <ImageView
+        style="@style/SplashScreenItem"
+        android:layout_marginTop="100dp"
+        android:scaleType="center"
+        android:src="@drawable/logo" />
+
+    <TextView
+        style="@style/SplashScreenItem"
+        android:text="HOME"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="true"
+        android:textSize="32sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="italic"/>
+
+</LinearLayout>

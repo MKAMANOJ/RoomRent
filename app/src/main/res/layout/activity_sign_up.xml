@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/FieldGroup"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/sign_up_title_top_margin"
+            android:text="@string/new_account"
+            android:textSize="@dimen/title"
+            android:textStyle="italic|bold"/>
+
+        <ImageView
+            android:id="@+id/chooseImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/user_name"
+            android:onClick="chooseGallery"
+            android:src="@drawable/choose_image_icon" />
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/FieldGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <EditText
+                android:id="@+id/name"
+                style="@style/PrimaryColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/home_edit_text_icons_padding"
+                android:drawableStart="@drawable/ic_action_user"
+                android:hint="@string/name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/userName" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/FieldGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <EditText
+                android:id="@+id/userName"
+                style="@style/PrimaryColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/home_edit_text_icons_padding"
+                android:drawableStart="@drawable/ic_action_user"
+                android:hint="@string/user_name"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/email" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/FieldGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/email"
+                style="@style/PrimaryColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/home_edit_text_icons_padding"
+                android:drawableStart="@drawable/ic_email"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/password" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/FieldGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/password"
+                style="@style/PrimaryColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/home_edit_text_icons_padding"
+                android:drawableStart="@drawable/ic_lock_outline"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/confirmPassword" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/FieldGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/confirmPassword"
+                style="@style/PrimaryColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/home_edit_text_icons_padding"
+                android:drawableStart="@drawable/ic_lock_outline"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/phoneNumber" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/FieldGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/phoneNumber"
+                style="@style/PrimaryColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/home_edit_text_icons_padding"
+                android:drawableStart="@drawable/ic_phone_android"
+                android:hint="@string/phone"
+                android:inputType="number"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/sendMessage" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/sendMessage"
+            style="@style/FieldGroup"
+            android:layout_marginTop="@dimen/button_top_margin"
+            android:background="@color/colorAccent"
+            android:onClick="create"
+            android:text="@string/create"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</ScrollView>

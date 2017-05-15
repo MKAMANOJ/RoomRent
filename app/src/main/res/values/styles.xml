@@ -1,0 +1,96 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/background</item>
+        <item name="android:windowSoftInputMode">stateHidden</item>
+    </style>
+
+    <!-- Splash Screen theme. -->
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- Home Screen theme. -->
+    <style name="HomeScreen" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="SplashScreenItem">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <!-- Screen Field and Buttons-->
+    <style name="FieldGroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginBottom">@dimen/fields_margin_button</item>
+        <item name="android:layout_marginLeft">@dimen/fields_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/fields_margin_right</item>
+        <item name="android:textColor">@color/fontPrimary</item>
+        <item name="android:textColorHint">@color/fontPrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <!-- Home Screen Field and Button -->
+    <style name="PrimaryColor">
+        <item name="android:textColor">@color/fontPrimary</item>
+        <item name="android:textColorHint">@color/fontPrimary</item>
+
+    </style>
+
+    <!-- To eliminate warning regarding TextInputLayout -->
+    <style name="TextAppearance.Design.Error" parent="TextAppearance.AppCompat.Caption" tools:override="true">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <!-- No Action Bar theme for Dialog Box -->
+    <style name="noActionBar" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        ...
+    </style>
+
+    <style name="CircularProgress" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/background</item>
+    </style>
+
+
+    <!--Style theme for tab Layout-->
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@android:color/white</item>
+        <item name="tabBackground">@color/primary_color</item>
+        <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@android:color/white</item>
+    </style>
+
+    <!--Theme for tab text-->
+    <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/tab_Default_color</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="SplashTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="SplashTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

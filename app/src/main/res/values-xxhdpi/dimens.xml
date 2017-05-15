@@ -1,0 +1,11 @@
+<resources>
+<dimen name="forget_password_padding">14.4dp</dimen>
+<dimen name="button_top_margin">12.0dp</dimen>
+<dimen name="forget_title_button_margin">36.0dp</dimen>
+<dimen name="forget_title_top_margin">36.0dp</dimen>
+<dimen name="home_edit_text_icons_padding">24.0dp</dimen>
+<dimen name="home_app_logo_margin_top">36.0dp</dimen>
+<dimen name="fields_margin_right">48.0dp</dimen>
+<dimen name="fields_margin_button">24.0dp</dimen>
+<dimen name="fields_margin_left">48.0dp</dimen>
+</resources>

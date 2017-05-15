@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/SplashScreenItem"
+                android:layout_marginTop="@dimen/home_app_logo_margin_top"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_logo" />
+
+            <TextView
+                style="@style/SplashScreenItem"
+                android:layout_marginTop="@dimen/home_text_below_logo_top_margin"
+                android:text="@string/home_home"
+                android:textAllCaps="true"
+                android:textColor="@color/fontPrimary"
+                android:textSize="@dimen/title"
+                android:textStyle="italic|bold" />
+
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/emailInputLayout"
+            style="@style/FieldGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/email"
+                style="@style/PrimaryColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/home_edit_text_icons_padding"
+                android:drawableStart="@drawable/ic_email"
+                android:hint="@string/email_username"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/password"
+                android:text="zeros" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <RelativeLayout
+            style="@style/FieldGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/passwordInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/password"
+                    style="@style/PrimaryColor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/home_edit_text_icons_padding"
+                    android:drawableStart="@drawable/ic_lock_outline"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/signIn"
+                    android:text="zeros" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:onClick="forgetPassword"
+                android:padding="@dimen/forget_password_padding"
+                android:src="@drawable/ic_live_help" />
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/signIn"
+            style="@style/FieldGroup"
+            android:layout_marginTop="@dimen/button_top_margin"
+            android:background="@color/colorAccent"
+            android:onClick="signIn"
+            android:text="@string/home_sign_in" />
+
+        <TextView
+            android:id="@+id/signUp"
+            style="@style/FieldGroup"
+            android:layout_width="wrap_content"
+            android:clickable="true"
+            android:onClick="signUp"
+            android:text="@string/home_sign_up" />
+
+    </LinearLayout>
+
+</ScrollView>

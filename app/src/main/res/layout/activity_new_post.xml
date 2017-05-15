@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        style="@style/FieldGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/sign_up_title_top_margin">
+
+
+        <Spinner
+            android:id="@+id/post_type_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="true">
+
+            <EditText
+                android:id="@+id/title"
+                style="@style/PrimaryColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Need a flat"
+                android:hint="@string/new_post_title"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/description" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="true">
+
+            <EditText
+                android:id="@+id/description"
+                style="@style/PrimaryColor"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|left"
+                android:hint="Description"
+                android:text="I need a flat having 3-5 rooms."
+                android:inputType="textMultiLine"
+                android:maxLines="8"
+                android:minLines="3"
+                android:scrollbars="vertical" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="true">
+
+            <EditText
+                android:id="@+id/noOfRoom"
+                style="@style/PrimaryColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/new_post_no_of_room"
+                android:text="6"
+                android:inputType="number"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/price" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/emailInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="true">
+
+            <EditText
+                android:id="@+id/price"
+                style="@style/PrimaryColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/new_post_price"
+                android:text="30000"
+                android:inputType="number"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/location_add" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/locationInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:hintAnimationEnabled="true">
+
+                <EditText
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:hint="@string/new_post_add_new_adress"
+                    android:text="Near Baneshwor Area"
+                    android:nextFocusDown="@+id/post" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/location_add"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_add_circle_outline"
+                android:onClick="addLocation" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/addHousePhotosTitle"
+            style="@style/PrimaryColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Add Room Phtos"
+            android:visibility="gone" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/roomPhotosLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/room_photos_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_top_margin"
+            android:background="@color/colorAccent"
+            android:onClick="post"
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
+            android:text="@string/post"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</ScrollView>

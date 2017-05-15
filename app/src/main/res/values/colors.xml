@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FB4A79</color>
+    <color name="recycler_odd">#f5f3f3</color>
+    <color name="recycler_even">#d4d4d4</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="background">#EFEFEF</color>
+    <color name="placeholder_grey">#AAADC4</color>
+    <color name="placeholder_grey_20">#33AAADC4</color>
+
+    <!-- Fonts-->
+    <color name="fontPrimary">#FFFFFF</color>
+    <color name="red">#FF0000</color>
+
+    <!--Text color for tabs-->
+    <color name="tab_Default_color">#A8A19E</color>
+
+    <!-- Primary color of the app (shown in the app bar) -->
+    <color name="primary_color">#4A312A</color>
+
+    <!-- Divider color line -->
+    <color name="colorDivide">#000000</color>
+    <color name="square_box">#615d5d</color>
+
+
+</resources>

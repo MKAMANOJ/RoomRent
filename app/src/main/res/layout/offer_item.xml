@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/offer_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    card_view:cardBackgroundColor="@color/recycler_odd"
+    card_view:cardCornerRadius="15dp"
+    card_view:cardElevation="@dimen/card_elevation">
+
+
+    <RelativeLayout
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.android.roomrent.Helper.CustomViewPager
+            android:id="@+id/offer_room_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:id="@+id/offer_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/offer_room_images"
+            android:maxLines="1"
+            android:padding="@dimen/paddingItemDecorationDefault"
+            android:text="Title"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="@dimen/supporting_text_size" />
+
+        <TextView
+            android:id="@+id/offer_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/offer_title"
+            android:maxLines="3"
+            android:padding="@dimen/paddingItemDecorationDefault"
+            android:text="Description"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="@dimen/supporting_text_size" />
+
+        <TextView
+            android:id="@+id/offer_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/offer_description"
+            android:maxLines="1"
+            android:padding="@dimen/paddingItemDecorationDefault"
+            android:text="Address"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="@dimen/supporting_text_size" />
+
+        <LinearLayout
+            android:id="@+id/offer_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/offer_address"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/offer_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:padding="@dimen/paddingItemDecorationDefault"
+                android:text="Price"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="@dimen/supporting_text_size" />
+
+            <TextView
+                android:id="@+id/offer_no_of_rooms"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:padding="@dimen/paddingItemDecorationDefault"
+                android:text="No of rooms"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="@dimen/supporting_text_size" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
